@@ -1,0 +1,24 @@
+{
+  "name": "lfot",
+  "author": "Angus Alves",
+  "version": "1.0.0",
+  "main": "lfot.js",
+  "preferGlobal": true,
+  "description": "Lightforce package manager, it's like wrapping a big fuzzy blanket around sfdx!",
+  "keywords": [
+    "salesforce",
+    "package",
+    "manager"
+  ],
+  "bin": {
+    "lfot": "./lfot.js"
+  },
+  "scripts": {
+    "preinstall": "bash ./bin/preinstall"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "marked": "^1.1.1",
+    "marked-terminal": "^4.1.0"
+  }
+}
