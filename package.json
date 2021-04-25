@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/gussamer/lfot#readme",
   "dependencies": {
-    "marked": "^1.1.1",
+    "marked": "^2.0.3",
     "marked-terminal": "^4.1.0"
   }
 }

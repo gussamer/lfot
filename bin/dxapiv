@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+require('child_process').exec('sfdx force --json',(err,sout,serr) => {
+    if(!sout) sout = '{"status":0,"result":{"apiVersion":"50.0"}}'
+    let version = JSON.parse(sout)
+    if(version&&version.status==0&&version.result&&version.result.apiVersion) console.log(version.result.apiVersion)
+    else console.log("50.0")
+})
