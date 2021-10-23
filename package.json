@@ -1,7 +1,7 @@
 {
   "name": "lfot",
   "author": "Angus Alves",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "lfot.js",
   "preferGlobal": true,
   "description": "Light Force Operator Tools! It's like wrapping a big fuzzy blanket around sfdx!",
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/gussamer/lfot#readme",
   "dependencies": {
-    "marked": "^2.0.3",
-    "marked-terminal": "^4.1.0"
+    "marked": "^2.1.3",
+    "marked-terminal": "^4.2.0"
   }
 }
