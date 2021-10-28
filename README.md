@@ -27,3 +27,30 @@
     ```bash
     lfot tool alias
     ```
+
+1. Build package.xml files for default user name
+
+    Default
+
+    ```bash
+    lfot meta fest
+    ```
+
+    Include only types defined in comma separated list
+
+    ```bash
+    lfot meta fest -i ApexClass,ApexPage
+    ```
+
+    Include all types except the types defined in comma separated list
+
+    ```bash
+    lfot meta fest -e Settings,Profile
+    ```
+
+    Include all types except the types in folders 
+      *note this is redundent until types in folders are supported as they are not as yet
+
+    ```bash
+    lfot meta fest -n
+    ```
