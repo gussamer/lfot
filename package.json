@@ -14,7 +14,8 @@
     "lfot": "./lfot.js"
   },
   "scripts": {
-    "preinstall": "bash ./bin/preinstall"
+    "preinstall": "bash ./bin/preinstall",
+    "uphelp": "bash -c \"cmd //c 'node --no-warnings bin/writehelp.js' > etc/help.html\""
   },
   "license": "ISC",
   "repository": {
@@ -24,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/gussamer/lfot/issues"
   },
-  "homepage": "https://github.com/gussamer/lfot#readme"
+  "homepage": "https://github.com/gussamer/lfot#readme",
+  "devDependencies": {
+    "markdown-to-html": "0.0.13"
+  }
 }

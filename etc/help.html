@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File README.md in .</title>
+</head>
+<body>
+<h1 id="lfot">LFOT</h1>
+<h2 id="light-force-operator-tools">Light Force Operator Tools</h2>
+<h3 id="it-s-like-wrapping-a-big-fuzzy-blanket-around-sfdx-">It&#39;s like wrapping a big fuzzy blanket around sfdx!</h3>
+<p>======================================</p>
+<h2 id="install">Install</h2>
+<ol>
+<li>Open Git Bash on Windows</li>
+<li><p>Run</p>
+<pre><code class="lang-bash"> npm i -g lfot
+</code></pre>
+</li>
+</ol>
+<h2 id="use">Use</h2>
+<ol>
+<li><p>Check the help by running</p>
+<pre><code class="lang-bash"> lfot help
+</code></pre>
+</li>
+<li><p>Generate a bashrc alias list of sfdx commands</p>
+<pre><code class="lang-bash"> lfot tool alias
+</code></pre>
+</li>
+<li><p>Build package.xml files for default user name</p>
+</li>
+<li><p>Default</p>
+<pre><code class="lang-bash">  lfot meta fest
+</code></pre>
+</li>
+<li><p>Include only types defined in comma separated list</p>
+<pre><code class="lang-bash">  lfot meta fest -i ApexClass,ApexPage
+</code></pre>
+</li>
+<li><p>Include all types except the types defined in comma separated list</p>
+<pre><code class="lang-bash">  lfot meta fest -e Settings,Profile
+</code></pre>
+</li>
+<li><p>Include all types except the types in folders, note this is redundent until types in folders are supported which they are not yet</p>
+<pre><code class="lang-bash">  lfot meta fest -n
+</code></pre>
+</li>
+<li><p>Specifiy the location and name of package.xml</p>
+<pre><code class="lang-bash">  lfot meta fest -f ./manifest/package.xml
+</code></pre>
+</li>
+</ol>
+</body>
+</html>
