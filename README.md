@@ -30,27 +30,32 @@
 
 1. Build package.xml files for default user name
 
-    Default
+- Default
 
     ```bash
     lfot meta fest
     ```
 
-    Include only types defined in comma separated list
+- Include only types defined in comma separated list
 
     ```bash
     lfot meta fest -i ApexClass,ApexPage
     ```
 
-    Include all types except the types defined in comma separated list
+- Include all types except the types defined in comma separated list
 
     ```bash
     lfot meta fest -e Settings,Profile
     ```
 
-    Include all types except the types in folders 
-      *note this is redundent until types in folders are supported as they are not as yet
+- Include all types except the types in folders, note this is redundent until types in folders are supported which they are not yet
 
     ```bash
     lfot meta fest -n
+    ```
+
+- Specifiy the location and name of package.xml
+
+    ```bash
+    lfot meta fest -f ./manifest/package.xml
     ```
