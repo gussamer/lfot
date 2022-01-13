@@ -24,8 +24,16 @@
 
 1. Generate a bashrc alias list of sfdx commands
 
+- Default
+
     ```bash
     lfot tool alias
+    ```
+
+- File output
+
+    ```bash
+    lfot tool alias -f ./path/filename.txt
     ```
 
 1. Build package.xml files for default user name
