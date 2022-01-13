@@ -29,7 +29,15 @@
 </code></pre>
 </li>
 <li><p>File output</p>
-<pre><code class="lang-bash">  lfot tool alias -f filename.txt
+<pre><code class="lang-bash">  lfot tool alias -f ./path/filename.txt
+</code></pre>
+</li>
+<li><p>Print human readable list instead of bash alias commands, overrides -f argument</p>
+<pre><code class="lang-bash">  lfot tool alias -p
+</code></pre>
+</li>
+<li><p>Suppress manually included overrides the developer prefers </p>
+<pre><code class="lang-bash">  lfot tool alias -n
 </code></pre>
 </li>
 <li><p>Build package.xml files for default user name</p>

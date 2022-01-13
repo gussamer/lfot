@@ -36,6 +36,18 @@
     lfot tool alias -f ./path/filename.txt
     ```
 
+- Print human readable list instead of bash alias commands, overrides -f argument
+
+    ```bash
+    lfot tool alias -p
+    ```
+
+- Suppress manually included overrides the developer prefers 
+
+    ```bash
+    lfot tool alias -n
+    ```
+
 1. Build package.xml files for default user name
 
 - Default
