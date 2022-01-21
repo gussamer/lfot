@@ -3,7 +3,11 @@
 ## Light Force Operator Tools
 
 ### It's like wrapping a big fuzzy blanket around sfdx!
-======================================
+============================================================================
+
+## Description
+
+The goal of this is project is to aid in a command line based salesforce development workflow by automating processes that span multiple existing sfdx commands. i.e. automating describe and list commands to build package.xml
 
 ## Install
 
@@ -12,6 +16,22 @@
 
     ```bash
     npm i -g lfot
+    ```
+
+### Optional Configuration
+
+While amusing the telekinetic spinner may be annoying in practical use. So this can be turned off via creating a settings file.
+
+1. Open Git Bash on Windows
+1. Run to create the lfot settings folder
+
+    ```bash
+    mkdir ~/.lfot
+    ```
+1. Run to write the lfot settings file
+
+    ```bash
+    echo "{\"showSpinnerDuration\":0,\"showSpinner\":false}" > ~/.lfot/settings.json
     ```
 
 ## Use
@@ -79,3 +99,18 @@
     ```bash
     lfot meta fest -f ./manifest/package.xml
     ```
+
+- Write package.xml content to stdout (overrides -f argument)
+
+    ```bash
+    lfot meta fest -c | nextcommand
+    ```
+
+- Increase buffer size for listing processes if you get exceed max buffer errors if you have too many members in metadata type, specify in Mbs, default is 10Mb
+
+    ```bash
+    lfot meta fest -m 10
+    ```
+
+
+
