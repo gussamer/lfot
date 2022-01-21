@@ -70,7 +70,7 @@ While amusing the telekinetic spinner may be annoying in practical use. So this 
 
 1. Build package.xml files for default user name
 
-- Default
+- Default, warning do not run while multi-tasking
 
     ```bash
     lfot meta fest
@@ -106,7 +106,7 @@ While amusing the telekinetic spinner may be annoying in practical use. So this 
     lfot meta fest -c | nextcommand
     ```
 
-- Increase buffer size for listing processes if you get exceed max buffer errors if you have too many members in metadata type, specify in Mbs, default is 10Mb
+- Increase buffer size for listing processes if you get exceed max buffer errors if you have too many members in a metadata type, specify in Mbs, default is 10Mb
 
     ```bash
     lfot meta fest -m 10
