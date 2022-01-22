@@ -1,90 +1,55 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>File README.md in .</title>
-</head>
-<body>
-<h1 id="lfot">LFOT</h1>
-<h2 id="light-force-operator-tools">Light Force Operator Tools</h2>
-<h3 id="it-s-like-wrapping-a-big-fuzzy-blanket-around-sfdx-">It&#39;s like wrapping a big fuzzy blanket around sfdx!</h3>
+<h1>LFOT</h1>
+
+<h2>Light Force Operator Tools</h2>
+
+<h3>It&#39;s like wrapping a big fuzzy blanket around sfdx!</h3>
+
 <p>============================================================================</p>
-<h2 id="description">Description</h2>
+
+<h2>Description</h2>
+
 <p>The goal of this is project is to aid in a command line based salesforce development workflow by automating processes that span multiple existing sfdx commands. i.e. automating describe and list commands to build package.xml</p>
-<h2 id="install">Install</h2>
-<ol>
-<li>Open Git Bash on Windows</li>
-<li><p>Run</p>
-<pre><code class="lang-bash"> npm i -g lfot
-</code></pre>
-</li>
-</ol>
-<h3 id="optional-configuration">Optional Configuration</h3>
+
+<h2>Install</h2>
+
+<ol><li>Open Git Bash on Windows</li><li><p>Run</p><p><code>bash
+npm i -g lfot
+</code></p></li></ol>
+
+<h3>Optional Configuration</h3>
+
 <p>While amusing the telekinetic spinner may be annoying in practical use. So this can be turned off via creating a settings file.</p>
-<ol>
-<li>Open Git Bash on Windows</li>
-<li><p>Run to create the lfot settings folder</p>
-<pre><code class="lang-bash"> mkdir ~/.lfot
-</code></pre>
-</li>
-<li><p>Run to write the lfot settings file</p>
-<pre><code class="lang-bash"> echo &quot;{\&quot;showSpinnerDuration\&quot;:0,\&quot;showSpinner\&quot;:false}&quot; &gt; ~/.lfot/settings.json
-</code></pre>
-</li>
-</ol>
-<h2 id="use">Use</h2>
-<ol>
-<li><p>Check the help by running</p>
-<pre><code class="lang-bash"> lfot help
-</code></pre>
-</li>
-<li><p>Generate a bashrc alias list of sfdx commands</p>
-</li>
-<li><p>Default</p>
-<pre><code class="lang-bash">  lfot tool alias
-</code></pre>
-</li>
-<li><p>File output</p>
-<pre><code class="lang-bash">  lfot tool alias -f ./path/filename.txt
-</code></pre>
-</li>
-<li><p>Print human readable list instead of bash alias commands, overrides -f argument</p>
-<pre><code class="lang-bash">  lfot tool alias -p
-</code></pre>
-</li>
-<li><p>Suppress manually included overrides the developer prefers </p>
-<pre><code class="lang-bash">  lfot tool alias -n
-</code></pre>
-</li>
-<li><p>Build package.xml files for default user name</p>
-</li>
-<li><p>Default, warning do not run while multi-tasking</p>
-<pre><code class="lang-bash">  lfot meta fest
-</code></pre>
-</li>
-<li><p>Include only types defined in comma separated list</p>
-<pre><code class="lang-bash">  lfot meta fest -i ApexClass,ApexPage
-</code></pre>
-</li>
-<li><p>Include all types except the types defined in comma separated list</p>
-<pre><code class="lang-bash">  lfot meta fest -e Settings,Profile
-</code></pre>
-</li>
-<li><p>Include all types except the types in folders, note this is redundent until types in folders are supported which they are not yet</p>
-<pre><code class="lang-bash">  lfot meta fest -n
-</code></pre>
-</li>
-<li><p>Specifiy the location and name of package.xml</p>
-<pre><code class="lang-bash">  lfot meta fest -f ./manifest/package.xml
-</code></pre>
-</li>
-<li><p>Write package.xml content to stdout (overrides -f argument)</p>
-<pre><code class="lang-bash">  lfot meta fest -c | nextcommand
-</code></pre>
-</li>
-<li><p>Increase buffer size for listing processes if you get exceed max buffer errors if you have too many members in a metadata type, specify in Mbs, default is 10Mb</p>
-<pre><code class="lang-bash">  lfot meta fest -m 10
-</code></pre>
-</li>
-</ol>
-</body>
-</html>
+
+<ol><li>Open Git Bash on Windows</li><li><p>Run to create the lfot settings folder</p><p><code>bash
+mkdir ~/.lfot
+</code></p></li><li><p>Run to write the lfot settings file</p><p><code>bash
+echo &quot;{\&quot;showSpinnerDuration\&quot;:0,\&quot;showSpinner\&quot;:false}&quot; &gt; ~/.lfot/settings.json
+</code></p></li></ol>
+
+<h2>Use</h2>
+
+<ol><li><p>Check the help by running</p><p><code>bash
+lfot help
+</code></p></li><li><p>Generate a bashrc alias list of sfdx commands</p></li><li><p>Default</p><p><code>bash
+lfot tool alias
+</code></p></li><li><p>File output</p><p><code>bash
+lfot tool alias -f ./path/filename.txt
+</code></p></li><li><p>Print human readable list instead of bash alias commands, overrides -f argument</p><p><code>bash
+lfot tool alias -p
+</code></p></li><li><p>Suppress manually included overrides the developer prefers </p><p><code>bash
+lfot tool alias -n
+</code></p></li><li><p>Build package.xml files for default user name</p></li><li><p>Default, warning do not run while multi-tasking</p><p><code>bash
+lfot meta fest
+</code></p></li><li><p>Include only types defined in comma separated list</p><p><code>bash
+lfot meta fest -i ApexClass,ApexPage
+</code></p></li><li><p>Include all types except the types defined in comma separated list</p><p><code>bash
+lfot meta fest -e Settings,Profile
+</code></p></li><li><p>Include all types except the types in folders, note this is redundent until types in folders are supported which they are not yet</p><p><code>bash
+lfot meta fest -n
+</code></p></li><li><p>Specifiy the location and name of package.xml</p><p><code>bash
+lfot meta fest -f ./manifest/package.xml
+</code></p></li><li><p>Write package.xml content to stdout (overrides -f argument)</p><p><code>bash
+lfot meta fest -c | nextcommand
+</code></p></li><li><p>Increase buffer size for listing processes if you get exceed max buffer errors if you have too many members in a metadata type, specify in Mbs, default is 10Mb</p><p><code>bash
+lfot meta fest -m 10
+</code></p></li></ol>

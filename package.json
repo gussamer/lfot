@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/gussamer/lfot/issues"
   },
-  "homepage": "https://github.com/gussamer/lfot#readme"
+  "homepage": "https://github.com/gussamer/lfot#readme",
+  "devDependencies": {
+    "markdown-to-html": "0.0.13"
+  }
 }
