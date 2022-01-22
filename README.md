@@ -103,7 +103,7 @@ While amusing the telekinetic spinner may be annoying in practical use. So this 
   - Write package.xml content to stdout (overrides -f argument)
 
       ```bash
-      lfot meta fest -c | nextcommand
+      lfot meta fest -c
       ```
 
   - Increase buffer size for listing processes if you get exceed max buffer errors if you have too many members in a metadata type, specify in Mbs, default is 10Mb
