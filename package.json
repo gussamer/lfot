@@ -27,6 +27,9 @@
   },
   "homepage": "https://github.com/gussamer/lfot#readme",
   "devDependencies": {
-    "markdown-to-html": "0.0.13"
+    "bl": "^5.0.0",
+    "markdown-to-html": "0.0.13",
+    "marked": "^4.0.10",
+    "open": "^8.4.0"
   }
 }
