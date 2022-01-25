@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 'use strict'
-const LightforceTools = require('./lib/LightforceTools')
-const lft = new LightforceTools()
+const LightForceTools = require('./lib/LightForceTools.js')
+const lft = new LightForceTools()
 lft.run(process.argv)
