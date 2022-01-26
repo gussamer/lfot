@@ -9,5 +9,5 @@ md.render(fileName, opts, function(err) {
     console.error('>>>' + err);
     process.exit();
   }
-  md.pipe(process.stdout);
+  require('fs').writeFileSync('./etc/help.html',md.html)
 });
