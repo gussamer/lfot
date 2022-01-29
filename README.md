@@ -11,7 +11,7 @@ The goal of this is project is to aid in a command line based salesforce develop
 
 ## Install
 
-1. Open Git Bash on Windows
+1. Open Git Bash on Windows (WSL and Linux support experimental)
 1. Run
 
     ```bash
@@ -42,7 +42,7 @@ While amusing the telekinetic spinner may be annoying in practical use. So this 
     lfot help
     ```
 
-1. Generate a bashrc alias list of sfdx commands
+1. Generate a bashrc alias list of sfdx commands (Only works for Git Bash on Windows)
 
   - Default
 
