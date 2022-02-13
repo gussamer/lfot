@@ -32,8 +32,19 @@
 </code></pre>
 </li>
 </ol>
-<h2 id="use">Use</h2>
+<p>Disable command line feedback aside from command out put, useful for piping commands</p>
 <ol>
+<li><p>Add the following to the settings file mentioned above</p>
+<pre><code class="lang-bash"> &quot;logThings&quot;:false
+</code></pre>
+</li>
+</ol>
+<p>Increase the default list command buffer size to prevent max buffer errors when an org has too many members in one type</p>
+<ol>
+<li><pre><code class="lang-bash"> &quot;maxBufferMBs&quot;:10
+</code></pre>
+<h2 id="use">Use</h2>
+</li>
 <li><p>Check the help by running</p>
 <pre><code class="lang-bash"> lfot help
 </code></pre>
@@ -84,7 +95,7 @@
 <pre><code class="lang-bash"> lfot meta fest -c
 </code></pre>
 </li>
-<li><p>Increase buffer size for listing processes if you get exceed max buffer errors if you have too many members in a metadata type, specify in Mbs, default is 10Mb</p>
+<li><p>Increase buffer size for listing processes if you get exceed max buffer errors if you have too many members in a metadata type, specify in Mbs, default is 10Mb (overrides settings value)</p>
 <pre><code class="lang-bash"> lfot meta fest -m 10
 </code></pre>
 </li>

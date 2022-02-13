@@ -34,6 +34,21 @@ While amusing the telekinetic spinner may be annoying in practical use. So this 
     echo "{\"showSpinnerDuration\":0,\"showSpinner\":false}" > ~/.lfot/settings.json
     ```
 
+Disable command line feedback aside from command out put, useful for piping commands
+
+1. Add the following to the settings file mentioned above
+
+    ```bash
+    "logThings":false
+    ```
+
+Increase the default list command buffer size to prevent max buffer errors when an org has too many members in one type
+
+1. 
+
+    ```bash
+    "maxBufferMBs":10
+    ```
 ## Use
 
 1. Check the help by running
@@ -106,7 +121,7 @@ While amusing the telekinetic spinner may be annoying in practical use. So this 
       lfot meta fest -c
       ```
 
-  - Increase buffer size for listing processes if you get exceed max buffer errors if you have too many members in a metadata type, specify in Mbs, default is 10Mb
+  - Increase buffer size for listing processes if you get exceed max buffer errors if you have too many members in a metadata type, specify in Mbs, default is 10Mb (overrides settings value)
 
       ```bash
       lfot meta fest -m 10
