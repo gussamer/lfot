@@ -3,11 +3,14 @@
 ## Light Force Operator Tools
 
 ### It's like wrapping a big fuzzy blanket around sfdx!
-==========================================================================
+___
+
 
 ## Description
 
 The goal of this is project is to aid in a command line based salesforce development workflow by automating processes that span multiple existing sfdx commands. i.e. automating describe and list commands to build package.xml
+
+___
 
 ## Install
 
@@ -20,7 +23,7 @@ The goal of this is project is to aid in a command line based salesforce develop
 
 ### Optional Configuration
 
-While amusing the telekinetic spinner may be annoying in practical use. So this can be turned off via creating a settings file.
+#### While amusing the telekinetic spinner may be annoying in practical use. So this can be turned off via creating a settings file.
 
 1. Open Git Bash on Windows
 1. Run to create the lfot settings folder
@@ -28,13 +31,14 @@ While amusing the telekinetic spinner may be annoying in practical use. So this 
     ```bash
     mkdir ~/.lfot
     ```
+
 1. Run to write the lfot settings file
 
     ```bash
     echo "{\"showSpinnerDuration\":0,\"showSpinner\":false}" > ~/.lfot/settings.json
     ```
 
-Disable command line feedback aside from command out put, useful for piping commands
+#### Disable command line feedback aside from command out put, useful for piping commands
 
 1. Add the following to the settings file mentioned above
 
@@ -42,13 +46,19 @@ Disable command line feedback aside from command out put, useful for piping comm
     "logThings":false
     ```
 
-Increase the default list command buffer size to prevent max buffer errors when an org has too many members in one type
+#### Increase the default list command buffer size to prevent max buffer errors when an org has too many members in one type
 
-1. 
+1. Add the following to the settings file mentioned above
 
     ```bash
     "maxBufferMBs":10
     ```
+
+
+___
+
+
+
 ## Use
 
 1. Check the help by running

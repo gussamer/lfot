@@ -1,106 +1,128 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>File README.md in .</title>
-  <style>body{ background: #222222; color: #dddddd }</style>
+<title>I'm helping!</title>
+<style>
+  body{ background: #222222; color: #dddddd }
+  pre{
+    padding: 16px;
+    overflow: auto;
+    font-size: 115%;
+    font-family:'Courier New', Courier, monospace;
+    line-height: 1.45;
+    background-color: var(--color-canvas-subtle);
+    border-radius: 6px;
+    border:#dddddd 0.1rem solid;
+  }
+</style>
 </head>
-<body>
+<body></body>
 <h1 id="lfot">LFOT</h1>
 <h2 id="light-force-operator-tools">Light Force Operator Tools</h2>
-<h3 id="it-s-like-wrapping-a-big-fuzzy-blanket-around-sfdx-">It&#39;s like wrapping a big fuzzy blanket around sfdx!</h3>
-<p>==========================================================================</p>
+<h3 id="its-like-wrapping-a-big-fuzzy-blanket-around-sfdx">It&#39;s like wrapping a big fuzzy blanket around sfdx!</h3>
+<hr>
 <h2 id="description">Description</h2>
 <p>The goal of this is project is to aid in a command line based salesforce development workflow by automating processes that span multiple existing sfdx commands. i.e. automating describe and list commands to build package.xml</p>
+<hr>
 <h2 id="install">Install</h2>
 <ol>
-<li>Open Git Bash on Windows (WSL and Linux support experimental)</li>
+<li><p>Open Git Bash on Windows (WSL and Linux support experimental)</p>
+</li>
 <li><p>Run</p>
-<pre><code class="lang-bash"> npm i -g lfot
+<pre><code class="language-bash">npm i -g lfot
 </code></pre>
 </li>
 </ol>
 <h3 id="optional-configuration">Optional Configuration</h3>
-<p>While amusing the telekinetic spinner may be annoying in practical use. So this can be turned off via creating a settings file.</p>
+<h4 id="while-amusing-the-telekinetic-spinner-may-be-annoying-in-practical-use-so-this-can-be-turned-off-via-creating-a-settings-file">While amusing the telekinetic spinner may be annoying in practical use. So this can be turned off via creating a settings file.</h4>
 <ol>
-<li>Open Git Bash on Windows</li>
+<li><p>Open Git Bash on Windows</p>
+</li>
 <li><p>Run to create the lfot settings folder</p>
-<pre><code class="lang-bash"> mkdir ~/.lfot
+<pre><code class="language-bash">mkdir ~/.lfot
 </code></pre>
 </li>
 <li><p>Run to write the lfot settings file</p>
-<pre><code class="lang-bash"> echo &quot;{\&quot;showSpinnerDuration\&quot;:0,\&quot;showSpinner\&quot;:false}&quot; &gt; ~/.lfot/settings.json
+<pre><code class="language-bash">echo &quot;{\&quot;showSpinnerDuration\&quot;:0,\&quot;showSpinner\&quot;:false}&quot; &gt; ~/.lfot/settings.json
 </code></pre>
 </li>
 </ol>
-<p>Disable command line feedback aside from command out put, useful for piping commands</p>
+<h4 id="disable-command-line-feedback-aside-from-command-out-put-useful-for-piping-commands">Disable command line feedback aside from command out put, useful for piping commands</h4>
 <ol>
 <li><p>Add the following to the settings file mentioned above</p>
-<pre><code class="lang-bash"> &quot;logThings&quot;:false
+<pre><code class="language-bash">&quot;logThings&quot;:false
 </code></pre>
 </li>
 </ol>
-<p>Increase the default list command buffer size to prevent max buffer errors when an org has too many members in one type</p>
+<h4 id="increase-the-default-list-command-buffer-size-to-prevent-max-buffer-errors-when-an-org-has-too-many-members-in-one-type">Increase the default list command buffer size to prevent max buffer errors when an org has too many members in one type</h4>
 <ol>
-<li><pre><code class="lang-bash"> &quot;maxBufferMBs&quot;:10
+<li><p>Add the following to the settings file mentioned above</p>
+<pre><code class="language-bash">&quot;maxBufferMBs&quot;:10
 </code></pre>
-<h2 id="use">Use</h2>
 </li>
+</ol>
+<hr>
+<h2 id="use">Use</h2>
+<ol>
 <li><p>Check the help by running</p>
-<pre><code class="lang-bash"> lfot help
+<pre><code class="language-bash">lfot help
 </code></pre>
 </li>
 <li><p>Generate a bashrc alias list of sfdx commands (Only works for Git Bash on Windows)</p>
+</li>
+</ol>
 <ul>
 <li><p>Default</p>
-<pre><code class="lang-bash"> lfot tool alias
+<pre><code class="language-bash">lfot tool alias
 </code></pre>
 </li>
 <li><p>File output</p>
-<pre><code class="lang-bash"> lfot tool alias -f ./path/filename.txt
+<pre><code class="language-bash">lfot tool alias -f ./path/filename.txt
 </code></pre>
 </li>
 <li><p>Print human readable list instead of bash alias commands, overrides -f argument</p>
-<pre><code class="lang-bash"> lfot tool alias -p
+<pre><code class="language-bash">lfot tool alias -p
 </code></pre>
 </li>
 <li><p>Suppress manually included overrides the developer prefers </p>
-<pre><code class="lang-bash"> lfot tool alias -n
+<pre><code class="language-bash">lfot tool alias -n
 </code></pre>
 </li>
 </ul>
-</li>
-<li><p>Build package.xml files for default user name</p>
+<ol>
+<li>Build package.xml files for default user name</li>
+</ol>
 <ul>
 <li><p>Default, warning do not run while multi-tasking</p>
-<pre><code class="lang-bash"> lfot meta fest
+<pre><code class="language-bash">lfot meta fest
 </code></pre>
 </li>
 <li><p>Include only types defined in comma separated list</p>
-<pre><code class="lang-bash"> lfot meta fest -i ApexClass,ApexPage
+<pre><code class="language-bash">lfot meta fest -i ApexClass,ApexPage
 </code></pre>
 </li>
 <li><p>Include all types except the types defined in comma separated list</p>
-<pre><code class="lang-bash"> lfot meta fest -e Settings,Profile
+<pre><code class="language-bash">lfot meta fest -e Settings,Profile
 </code></pre>
 </li>
 <li><p>Include all types except the types in folders, note this is redundent until types in folders are supported which they are not yet</p>
-<pre><code class="lang-bash"> lfot meta fest -n
+<pre><code class="language-bash">lfot meta fest -n
 </code></pre>
 </li>
 <li><p>Specifiy the location and name of package.xml</p>
-<pre><code class="lang-bash"> lfot meta fest -f ./manifest/package.xml
+<pre><code class="language-bash">lfot meta fest -f ./manifest/package.xml
 </code></pre>
 </li>
 <li><p>Write package.xml content to stdout (overrides -f argument)</p>
-<pre><code class="lang-bash"> lfot meta fest -c
+<pre><code class="language-bash">lfot meta fest -c
 </code></pre>
 </li>
 <li><p>Increase buffer size for listing processes if you get exceed max buffer errors if you have too many members in a metadata type, specify in Mbs, default is 10Mb (overrides settings value)</p>
-<pre><code class="lang-bash"> lfot meta fest -m 10
+<pre><code class="language-bash">lfot meta fest -m 10
 </code></pre>
 </li>
 </ul>
-</li>
-</ol>
 </body>
+</head>
 </html>
