@@ -61,13 +61,13 @@ ___
 
 ## Use
 
-1. Check the help by running
+### Check the help by running
 
     ```bash
     lfot help
     ```
 
-1. Generate a bashrc alias list of sfdx commands (Only works for Git Bash on Windows)
+### Generate a bashrc alias list of sfdx commands (Only works for Git Bash on Windows)
 
   - Default
 
@@ -93,7 +93,7 @@ ___
       lfot tool alias -n
       ```
 
-1. Build package.xml files for default user name
+### Build package.xml files for default user name
 
   - Default, warning do not run while multi-tasking
 
