@@ -63,9 +63,11 @@ ___
 
 ### Check the help by running
 
-    ```bash
-    lfot help
-    ```
+  - Default
+
+      ```bash
+      lfot help
+      ```
 
 ### Generate a bashrc alias list of sfdx commands (Only works for Git Bash on Windows)
 
