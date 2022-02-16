@@ -65,10 +65,12 @@
 <hr>
 <h2 id="use">Use</h2>
 <h3 id="check-the-help-by-running">Check the help by running</h3>
-<pre><code>```bash
-lfot help
-```
+<ul>
+<li><p>Default</p>
+<pre><code class="language-bash">lfot help
 </code></pre>
+</li>
+</ul>
 <h3 id="generate-a-bashrc-alias-list-of-sfdx-commands-only-works-for-git-bash-on-windows">Generate a bashrc alias list of sfdx commands (Only works for Git Bash on Windows)</h3>
 <ul>
 <li><p>Default</p>
@@ -116,6 +118,51 @@ lfot help
 </li>
 <li><p>Increase buffer size for listing processes if you get exceed max buffer errors if you have too many members in a metadata type, specify in Mbs, default is 10Mb (overrides settings value)</p>
 <pre><code class="language-bash">lfot meta fest -m 10
+</code></pre>
+</li>
+</ul>
+<h3 id="alias-for-sfdx-forceorgopen">Alias for sfdx force:org:open</h3>
+<ul>
+<li><p>Default, open your defined defualt page in your default org</p>
+<pre><code class="language-bash">lfot open
+</code></pre>
+</li>
+<li><p>Default, open your defined defualt page in specified org</p>
+<pre><code class="language-bash">lfot open -u user@name.alias
+</code></pre>
+</li>
+</ul>
+<h3 id="open-setup-pages">Open setup pages</h3>
+<ul>
+<li><p>Default, open setup home page</p>
+<pre><code class="language-bash">lfot open setp
+</code></pre>
+</li>
+<li><p>Open setup object manager</p>
+<pre><code class="language-bash">lfot open setp -o
+</code></pre>
+</li>
+<li><p>Open setup debug logs</p>
+<pre><code class="language-bash">lfot open setp -l
+</code></pre>
+</li>
+<li><p>Open setup apex jobs</p>
+<pre><code class="language-bash">lfot open setp -j
+</code></pre>
+</li>
+<li><p>Will pass further args to sfdx force:org:open such as specifying username</p>
+<pre><code class="language-bash">lfot open setp -j -u user@name.alias
+</code></pre>
+</li>
+</ul>
+<h3 id="open-record-pages">Open record pages</h3>
+<ul>
+<li><p>Open record page by Id</p>
+<pre><code class="language-bash">lfot open recd -i 001XXXXXXXXXXXXAAA
+</code></pre>
+</li>
+<li><p>Will pass further args to sfdx force:org:open such as specifying username</p>
+<pre><code class="language-bash">lfot open recd -i 001XXXXXXXXXXXXAAA -u user@name.alias
 </code></pre>
 </li>
 </ul>

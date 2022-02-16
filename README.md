@@ -139,5 +139,64 @@ ___
       lfot meta fest -m 10
       ```
 
+### Alias for sfdx force:org:open
+
+  - Default, open your defined defualt page in your default org
+
+      ```bash
+      lfot open
+      ```
+
+  - Default, open your defined defualt page in specified org
+
+      ```bash
+      lfot open -u user@name.alias
+      ```
+
+### Open setup pages
+
+  - Default, open setup home page
+
+      ```bash
+      lfot open setp
+      ```
+
+  - Open setup object manager
+
+      ```bash
+      lfot open setp -o
+      ```
+
+  - Open setup debug logs
+
+      ```bash
+      lfot open setp -l
+      ```
+
+  - Open setup apex jobs
+
+      ```bash
+      lfot open setp -j
+      ```
+
+  - Will pass further args to sfdx force:org:open such as specifying username
+
+      ```bash
+      lfot open setp -j -u user@name.alias
+      ```
+
+### Open record pages
+
+  - Open record page by Id
+
+      ```bash
+      lfot open recd -i 001XXXXXXXXXXXXAAA
+      ```
+
+  - Will pass further args to sfdx force:org:open such as specifying username
+
+      ```bash
+      lfot open recd -i 001XXXXXXXXXXXXAAA -u user@name.alias
+      ```
 
 
