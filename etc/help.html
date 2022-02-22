@@ -64,14 +64,16 @@
 </ol>
 <hr>
 <h2 id="use">Use</h2>
-<h3 id="check-the-help-by-running">Check the help by running</h3>
+<h3 id="help">Help</h3>
+<h4 id="check-the-help-by-running">Check the help by running</h4>
 <ul>
 <li><p>Default</p>
 <pre><code class="language-bash">lfot help
 </code></pre>
 </li>
 </ul>
-<h3 id="generate-a-bashrc-alias-list-of-sfdx-commands-only-works-for-git-bash-on-windows">Generate a bashrc alias list of sfdx commands (Only works for Git Bash on Windows)</h3>
+<h3 id="tool">Tool</h3>
+<h4 id="generate-a-bashrc-alias-list-of-sfdx-commands-only-works-for-git-bash-on-windows">Generate a bashrc alias list of sfdx commands (Only works for Git Bash on Windows)</h4>
 <ul>
 <li><p>Default</p>
 <pre><code class="language-bash">lfot tool alias
@@ -90,7 +92,31 @@
 </code></pre>
 </li>
 </ul>
-<h3 id="build-packagexml-files-for-default-user-name">Build package.xml files for default user name</h3>
+<h4 id="generate-comma-separated-list-of-fields">Generate comma separated list of fields</h4>
+<ul>
+<li><p>Default</p>
+<pre><code class="language-bash">lfot tool flist -s Account
+</code></pre>
+</li>
+<li><p>Include fields matching all(AND) provided key value pairs in object </p>
+<pre><code class="language-bash">lfot tool flist -s Account -i {\&quot;custom\&quot;:true}
+</code></pre>
+</li>
+<li><p>Exclude fields matching any(OR) provided key value pairs in object</p>
+<pre><code class="language-bash">lfot tool flist -s Account -e {\&quot;custom\&quot;:true}
+</code></pre>
+</li>
+<li><p>String values passed in either include or exclude objects are matched as regular expressions</p>
+<pre><code class="language-bash">lfot tool flist -s Account -i {\&quot;name\&quot;:\&quot;[Ii][Dd]\&quot;} -e {\&quot;name\&quot;:\&quot;.*__.*|.*__.*__c\&quot;}
+</code></pre>
+</li>
+<li><p>Will pass further args to sfdx force:schema:sobject:describe such as specifying username</p>
+<pre><code class="language-bash">lfot tool flist -s Account -u user@name.alias
+</code></pre>
+</li>
+</ul>
+<h3 id="meta">Meta</h3>
+<h4 id="build-packagexml-files-for-default-user-name">Build package.xml files for default user name</h4>
 <ul>
 <li><p>Default, warning do not run while multi-tasking</p>
 <pre><code class="language-bash">lfot meta fest
@@ -108,6 +134,10 @@
 <pre><code class="language-bash">lfot meta fest -n
 </code></pre>
 </li>
+<li><p>Include only members from the org filtering out all namespaced members</p>
+<pre><code class="language-bash">lfot meta fest -s
+</code></pre>
+</li>
 <li><p>Specifiy the location and name of package.xml</p>
 <pre><code class="language-bash">lfot meta fest -f ./manifest/package.xml
 </code></pre>
@@ -121,7 +151,8 @@
 </code></pre>
 </li>
 </ul>
-<h3 id="alias-for-sfdx-forceorgopen">Alias for sfdx force:org:open</h3>
+<h3 id="open">Open</h3>
+<h4 id="alias-for-sfdx-forceorgopen">Alias for sfdx force:org:open</h4>
 <ul>
 <li><p>Default, open your defined defualt page in your default org</p>
 <pre><code class="language-bash">lfot open
@@ -131,11 +162,19 @@
 <pre><code class="language-bash">lfot open -u user@name.alias
 </code></pre>
 </li>
+<li><p>Open record page by Id</p>
+<pre><code class="language-bash">lfot open -p 001XXXXXXXXXXXXAAA
+</code></pre>
+</li>
 </ul>
-<h3 id="open-setup-pages">Open setup pages</h3>
+<h4 id="open-setup-pages">Open setup pages</h4>
 <ul>
 <li><p>Default, open setup home page</p>
 <pre><code class="language-bash">lfot open setp
+</code></pre>
+</li>
+<li><p>Open setup deploy status</p>
+<pre><code class="language-bash">lfot open setp -d
 </code></pre>
 </li>
 <li><p>Open setup object manager</p>
@@ -155,7 +194,7 @@
 </code></pre>
 </li>
 </ul>
-<h3 id="open-record-pages">Open record pages</h3>
+<h4 id="open-record-pages">Open record pages</h4>
 <ul>
 <li><p>Open record page by Id</p>
 <pre><code class="language-bash">lfot open recd -i 001XXXXXXXXXXXXAAA

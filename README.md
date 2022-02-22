@@ -61,7 +61,9 @@ ___
 
 ## Use
 
-### Check the help by running
+### Help
+
+#### Check the help by running
 
   - Default
 
@@ -69,7 +71,9 @@ ___
       lfot help
       ```
 
-### Generate a bashrc alias list of sfdx commands (Only works for Git Bash on Windows)
+### Tool
+
+#### Generate a bashrc alias list of sfdx commands (Only works for Git Bash on Windows)
 
   - Default
 
@@ -95,7 +99,41 @@ ___
       lfot tool alias -n
       ```
 
-### Build package.xml files for default user name
+#### Generate comma separated list of fields
+
+  - Default
+
+      ```bash
+      lfot tool flist -s Account
+      ```
+
+  - Include fields matching all(AND) provided key value pairs in object 
+
+      ```bash
+      lfot tool flist -s Account -i {\"custom\":true}
+      ```
+
+  - Exclude fields matching any(OR) provided key value pairs in object
+
+      ```bash
+      lfot tool flist -s Account -e {\"custom\":true}
+      ```
+
+  - String values passed in either include or exclude objects are matched as regular expressions
+
+      ```bash
+      lfot tool flist -s Account -i {\"name\":\"[Ii][Dd]\"} -e {\"name\":\".*__.*|.*__.*__c\"}
+      ```
+
+  - Will pass further args to sfdx force:schema:sobject:describe such as specifying username
+
+      ```bash
+      lfot tool flist -s Account -u user@name.alias
+      ```
+
+### Meta
+
+#### Build package.xml files for default user name
 
   - Default, warning do not run while multi-tasking
 
@@ -121,6 +159,12 @@ ___
       lfot meta fest -n
       ```
 
+  - Include only members from the org filtering out all namespaced members
+
+      ```bash
+      lfot meta fest -s
+      ```
+
   - Specifiy the location and name of package.xml
 
       ```bash
@@ -139,7 +183,9 @@ ___
       lfot meta fest -m 10
       ```
 
-### Alias for sfdx force:org:open
+### Open
+
+#### Alias for sfdx force:org:open
 
   - Default, open your defined defualt page in your default org
 
@@ -153,12 +199,24 @@ ___
       lfot open -u user@name.alias
       ```
 
-### Open setup pages
+  - Open record page by Id
+  
+      ```bash
+      lfot open -p 001XXXXXXXXXXXXAAA
+      ```
+
+#### Open setup pages
 
   - Default, open setup home page
 
       ```bash
       lfot open setp
+      ```
+
+  - Open setup deploy status
+
+      ```bash
+      lfot open setp -d
       ```
 
   - Open setup object manager
@@ -185,7 +243,7 @@ ___
       lfot open setp -j -u user@name.alias
       ```
 
-### Open record pages
+#### Open record pages
 
   - Open record page by Id
 
@@ -198,5 +256,3 @@ ___
       ```bash
       lfot open recd -i 001XXXXXXXXXXXXAAA -u user@name.alias
       ```
-
-
