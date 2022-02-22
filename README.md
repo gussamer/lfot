@@ -122,7 +122,7 @@ ___
   - String values passed in either include or exclude objects are matched as regular expressions
 
       ```bash
-      lfot tool flist -s Account -i {\"name\":\"[Ii][Dd]\"} -e {\"name\":\".*__.*|.*__.*__c\"}
+      lfot tool flist -s Account -i {\"name\":\"[Ii][Dd]\"} -e {\"name\":\".*__.*\|.*__.*__c\"}
       ```
 
   - Will pass further args to sfdx force:schema:sobject:describe such as specifying username

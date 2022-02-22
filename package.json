@@ -1,7 +1,7 @@
 {
   "name": "lfot",
   "author": "Angus Alves",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "main": "lfot.js",
   "preferGlobal": true,
   "description": "Light Force Operator Tools! It's like wrapping a big fuzzy blanket around sfdx!",
