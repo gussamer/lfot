@@ -4,7 +4,6 @@
 <head>
 <title>I'm helping!</title>
 <style>
-  body{ background: #222222; color: #dddddd }
   pre{
     padding: 16px;
     overflow: auto;
@@ -23,7 +22,7 @@
 <h3 id="its-like-wrapping-a-big-fuzzy-blanket-around-sfdx">It&#39;s like wrapping a big fuzzy blanket around sfdx!</h3>
 <hr>
 <h2 id="description">Description</h2>
-<p>The goal of this is project is to aid in a command line based salesforce development workflow by automating processes that span multiple existing sfdx commands. i.e. automating describe and list commands to build package.xml</p>
+<p>The goal of this is project is to aid in a command line based salesforce development workflow by automating processes that span multiple existing <a href="https://www.npmjs.com/package/sfdx-cli">sfdx</a> commands. i.e. automating describe and list commands to build a package.xml file</p>
 <hr>
 <h2 id="install">Install</h2>
 <ol>
@@ -59,6 +58,13 @@
 <ol>
 <li><p>Add the following to the settings file mentioned above</p>
 <pre><code class="language-bash">&quot;maxBufferMBs&quot;:10
+</code></pre>
+</li>
+</ol>
+<h4 id="use-command-line-help-will-pipe-text-help-to-stdout-rather-than-open-html-version-in-browser">Use command line help, will pipe text help to stdout rather than open html version in browser</h4>
+<ol>
+<li><p>Add the following to the settings file mentioned above</p>
+<pre><code class="language-bash">&quot;browserHelp&quot;:false
 </code></pre>
 </li>
 </ol>
@@ -107,7 +113,7 @@
 </code></pre>
 </li>
 <li><p>String values passed in either include or exclude objects are matched as regular expressions</p>
-<pre><code class="language-bash">lfot tool flist -s Account -i {\&quot;name\&quot;:\&quot;[Ii][Dd]\&quot;} -e {\&quot;name\&quot;:\&quot;.*__.*|.*__.*__c\&quot;}
+<pre><code class="language-bash">lfot tool flist -s Account -i {\&quot;name\&quot;:\&quot;[Ii][Dd]\&quot;} -e {\&quot;name\&quot;:\&quot;.*__.*\|.*__.*__c\&quot;}
 </code></pre>
 </li>
 <li><p>Will pass further args to sfdx force:schema:sobject:describe such as specifying username</p>

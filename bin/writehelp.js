@@ -9,7 +9,6 @@ const help = '\n<!DOCTYPE html>'
             +'\n<head>'
             +'\n<title>I\'m helping!</title>'
             +'\n<style>'
-            +'\n  body{ background: #222222; color: #dddddd }'
             +'\n  pre{'
             +'\n    padding: 16px;'
             +'\n    overflow: auto;'
@@ -28,6 +27,7 @@ const help = '\n<!DOCTYPE html>'
             +'\n</head>'
             +'\n</html>'
 fs.writeFileSync('./etc/help.html',help)
+exec('bash ./node_modules/.bin/html ./etc/help.html > ./etc/help.txt')
 
 
 

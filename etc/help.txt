@@ -1,0 +1,207 @@
+
+ ┏━━━━━━━━━━━━━━━━━━━━┓
+ ┃    I'm helping!    ┃
+ ┗━━━━━━━━━━━━━━━━━━━━┛
+ 
+ 
+  § LFOT 
+ 
+  § Light Force Operator Tools 
+ 
+  § It's like wrapping a big fuzzy blanket around sfdx! 
+ 
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 
+  § Description 
+ 
+ The goal of this is project is to aid in a command line based salesforce development workflow by automating processes
+ that span multiple existing sfdx commands. i.e. automating describe and list commands to build a package.xml file
+ 
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 
+  § Install 
+ 
+  1. Open Git Bash on Windows (WSL and Linux support experimental)
+  
+  2. Run
+     
+       1 npm i -g lfot
+ 
+  § Optional Configuration 
+ 
+  § While amusing the telekinetic spinner may be annoying in practical use. So this can be turned off via creating a
+ settings file.
+ 
+  1. Open Git Bash on Windows
+  
+  2. Run to create the lfot settings folder
+     
+       1 mkdir ~/.lfot
+  
+  3. Run to write the lfot settings file
+     
+       1 echo "{\"showSpinnerDuration\":0,\"showSpinner\":false}" > ~/.lfot/settings.json
+ 
+  § Disable command line feedback aside from command out put, useful for piping commands
+ 
+  1. Add the following to the settings file mentioned above
+     
+       1 "logThings":false
+ 
+  § Increase the default list command buffer size to prevent max buffer errors when an org has too many members in one
+ type
+ 
+  1. Add the following to the settings file mentioned above
+     
+       1 "maxBufferMBs":10
+ 
+  § Use command line help, will pipe text help to stdout rather than open html version in browser
+ 
+  1. Add the following to the settings file mentioned above
+     
+       1 "browserHelp":false
+ 
+ ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 
+  § Use 
+ 
+  § Help 
+ 
+  § Check the help by running
+ 
+  • Default
+    
+      1 lfot help
+ 
+  § Tool 
+ 
+  § Generate a bashrc alias list of sfdx commands (Only works for Git Bash on Windows)
+ 
+  • Default
+    
+      1 lfot tool alias
+  
+  • File output
+    
+      1 lfot tool alias -f ./path/filename.txt
+  
+  • Print human readable list instead of bash alias commands, overrides -f argument
+    
+      1 lfot tool alias -p
+  
+  • Suppress manually included overrides the developer prefers
+    
+      1 lfot tool alias -n
+ 
+  § Generate comma separated list of fields
+ 
+  • Default
+    
+      1 lfot tool flist -s Account
+  
+  • Include fields matching all(AND) provided key value pairs in object
+    
+      1 lfot tool flist -s Account -i {\"custom\":true}
+  
+  • Exclude fields matching any(OR) provided key value pairs in object
+    
+      1 lfot tool flist -s Account -e {\"custom\":true}
+  
+  • String values passed in either include or exclude objects are matched as regular expressions
+    
+      1 lfot tool flist -s Account -i {\"name\":\"[Ii][Dd]\"} -e {\"name\":\".*__.*\|.*__.*__c\"}
+  
+  • Will pass further args to sfdx force:schema:sobject:describe such as specifying username
+    
+      1 lfot tool flist -s Account -u user@name.alias
+ 
+  § Meta 
+ 
+  § Build package.xml files for default user name
+ 
+  • Default, warning do not run while multi-tasking
+    
+      1 lfot meta fest
+  
+  • Include only types defined in comma separated list
+    
+      1 lfot meta fest -i ApexClass,ApexPage
+  
+  • Include all types except the types defined in comma separated list
+    
+      1 lfot meta fest -e Settings,Profile
+  
+  • Include all types except the types in folders, note this is redundent until types in folders are supported which
+    they are not yet
+    
+      1 lfot meta fest -n
+  
+  • Include only members from the org filtering out all namespaced members
+    
+      1 lfot meta fest -s
+  
+  • Specifiy the location and name of package.xml
+    
+      1 lfot meta fest -f ./manifest/package.xml
+  
+  • Write package.xml content to stdout (overrides -f argument)
+    
+      1 lfot meta fest -c
+  
+  • Increase buffer size for listing processes if you get exceed max buffer errors if you have too many members in a
+    metadata type, specify in Mbs, default is 10Mb (overrides settings value)
+    
+      1 lfot meta fest -m 10
+ 
+  § Open 
+ 
+  § Alias for sfdx force:org:open
+ 
+  • Default, open your defined defualt page in your default org
+    
+      1 lfot open
+  
+  • Default, open your defined defualt page in specified org
+    
+      1 lfot open -u user@name.alias
+  
+  • Open record page by Id
+    
+      1 lfot open -p 001XXXXXXXXXXXXAAA
+ 
+  § Open setup pages
+ 
+  • Default, open setup home page
+    
+      1 lfot open setp
+  
+  • Open setup deploy status
+    
+      1 lfot open setp -d
+  
+  • Open setup object manager
+    
+      1 lfot open setp -o
+  
+  • Open setup debug logs
+    
+      1 lfot open setp -l
+  
+  • Open setup apex jobs
+    
+      1 lfot open setp -j
+  
+  • Will pass further args to sfdx force:org:open such as specifying username
+    
+      1 lfot open setp -j -u user@name.alias
+ 
+  § Open record pages
+ 
+  • Open record page by Id
+    
+      1 lfot open recd -i 001XXXXXXXXXXXXAAA
+  
+  • Will pass further args to sfdx force:org:open such as specifying username
+    
+      1 lfot open recd -i 001XXXXXXXXXXXXAAA -u user@name.alias
+

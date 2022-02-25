@@ -8,7 +8,7 @@ ___
 
 ## Description
 
-The goal of this is project is to aid in a command line based salesforce development workflow by automating processes that span multiple existing sfdx commands. i.e. automating describe and list commands to build package.xml
+The goal of this is project is to aid in a command line based salesforce development workflow by automating processes that span multiple existing [sfdx](https://www.npmjs.com/package/sfdx-cli) commands. i.e. automating describe and list commands to build a package.xml file
 
 ___
 
@@ -52,6 +52,14 @@ ___
 
     ```bash
     "maxBufferMBs":10
+    ```
+
+#### Use command line help, will pipe text help to stdout rather than open html version in browser
+
+1. Add the following to the settings file mentioned above
+
+    ```bash
+    "browserHelp":false
     ```
 
 
