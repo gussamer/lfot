@@ -161,7 +161,7 @@
     
       1 lfot open
   
-  • Default, open your defined defualt page in specified org
+  • Open your defualt page in specified org
     
       1 lfot open -u user@name.alias
   

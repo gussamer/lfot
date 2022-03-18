@@ -201,7 +201,7 @@ ___
       lfot open
       ```
 
-  - Default, open your defined defualt page in specified org
+  - Open your defualt page in specified org
 
       ```bash
       lfot open -u user@name.alias
