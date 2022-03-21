@@ -1,3 +1,4 @@
+[![NPM](https://img.shields.io/npm/v/lfot.svg)](https://www.npmjs.com/package/lfot)
 [![lfot](https://snyk.io/advisor/npm-package/lfot/badge.svg)](https://snyk.io/advisor/npm-package/lfot)
 # LFOT
 
