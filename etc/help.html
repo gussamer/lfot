@@ -23,6 +23,15 @@
 <hr>
 <h2 id="description">Description</h2>
 <p>The goal of this is project is to aid in a command line based salesforce development workflow by automating processes that span multiple existing <a href="https://www.npmjs.com/package/sfdx-cli">sfdx</a> commands. i.e. automating describe and list commands to build a package.xml file</p>
+<h2 id="updates">Updates</h2>
+<ul>
+<li><p>Foldered types now supported with meta fest command i.e. Report,Dashboard</p>
+</li>
+<li><p>alwaysHelp setting added to turn off the opening of help automatically</p>
+</li>
+<li><p>WSL support seems to be working though with a big salesforce asterisk down in the AT4DX example</p>
+</li>
+</ul>
 <hr>
 <h2 id="install">Install</h2>
 <ol>
@@ -65,6 +74,13 @@
 <ol>
 <li><p>Add the following to the settings file mentioned above</p>
 <pre><code class="language-bash">&quot;browserHelp&quot;:false
+</code></pre>
+</li>
+</ol>
+<h4 id="turn-off-auto-help-entirely">Turn off auto help entirely</h4>
+<ol>
+<li><p>Add the following to the settings file mentioned above</p>
+<pre><code class="language-bash">&quot;alwaysHelp&quot;:false
 </code></pre>
 </li>
 </ol>
@@ -136,7 +152,7 @@
 <pre><code class="language-bash">lfot meta fest -e Settings,Profile
 </code></pre>
 </li>
-<li><p>Include all types except the types in folders, note this is redundent until types in folders are supported which they are not yet</p>
+<li><p>Include all types except the types in folders</p>
 <pre><code class="language-bash">lfot meta fest -n
 </code></pre>
 </li>

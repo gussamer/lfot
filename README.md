@@ -3,6 +3,7 @@
 ## Light Force Operator Tools
 
 ### It's like wrapping a big fuzzy blanket around sfdx!
+
 ___
 
 
@@ -10,7 +11,15 @@ ___
 
 The goal of this is project is to aid in a command line based salesforce development workflow by automating processes that span multiple existing [sfdx](https://www.npmjs.com/package/sfdx-cli) commands. i.e. automating describe and list commands to build a package.xml file
 
+
+## Updates
+
+- Foldered types now supported with meta fest command i.e. Report,Dashboard
+
+- alwaysHelp setting added to turn off the opening of help automatically
+
 ___
+
 
 ## Install
 
@@ -61,10 +70,15 @@ ___
     ```bash
     "browserHelp":false
     ```
+#### Turn off auto help entirely
 
+1. Add the following to the settings file mentioned above
+
+    ```bash
+    "alwaysHelp":false
+    ```
 
 ___
-
 
 
 ## Use
@@ -161,7 +175,7 @@ ___
       lfot meta fest -e Settings,Profile
       ```
 
-  - Include all types except the types in folders, note this is redundent until types in folders are supported which they are not yet
+  - Include all types except the types in folders
 
       ```bash
       lfot meta fest -n

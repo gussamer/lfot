@@ -17,6 +17,14 @@
  The goal of this is project is to aid in a command line based salesforce development workflow by automating processes
  that span multiple existing sfdx commands. i.e. automating describe and list commands to build a package.xml file
  
+  § Updates 
+ 
+  • Foldered types now supported with meta fest command i.e. Report,Dashboard
+  
+  • alwaysHelp setting added to turn off the opening of help automatically
+  
+  • WSL support seems to be working though with a big salesforce asterisk down in the AT4DX example
+ 
  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
  
   § Install 
@@ -60,6 +68,12 @@
   1. Add the following to the settings file mentioned above
      
        1 "browserHelp":false
+ 
+  § Turn off auto help entirely
+ 
+  1. Add the following to the settings file mentioned above
+     
+       1 "alwaysHelp":false
  
  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
  
@@ -131,8 +145,7 @@
     
       1 lfot meta fest -e Settings,Profile
   
-  • Include all types except the types in folders, note this is redundent until types in folders are supported which
-    they are not yet
+  • Include all types except the types in folders
     
       1 lfot meta fest -n
   
