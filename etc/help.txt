@@ -3,6 +3,8 @@
  ┃    I'm helping!    ┃
  ┗━━━━━━━━━━━━━━━━━━━━┛
  
+ ![lfot]
+ 
  
   § LFOT 
  
@@ -22,8 +24,6 @@
   • Foldered types now supported with meta fest command i.e. Report,Dashboard
   
   • alwaysHelp setting added to turn off the opening of help automatically
-  
-  • WSL support seems to be working though with a big salesforce asterisk down in the AT4DX example
  
  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
  

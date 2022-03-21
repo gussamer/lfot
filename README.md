@@ -1,3 +1,4 @@
+[![lfot](https://snyk.io/advisor/npm-package/lfot/badge.svg)](https://snyk.io/advisor/npm-package/lfot)
 # LFOT
 
 ## Light Force Operator Tools

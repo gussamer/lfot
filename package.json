@@ -15,7 +15,8 @@
   },
   "scripts": {
     "preinstall": "bash ./bin/preinstall",
-    "uphelp": "node ./bin/writehelp.js"
+    "uphelp": "node ./bin/writehelp.js",
+    "test": "snyk test"
   },
   "license": "ISC",
   "repository": {
