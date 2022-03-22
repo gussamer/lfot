@@ -1,5 +1,6 @@
 [![NPM](https://img.shields.io/npm/v/lfot.svg)](https://www.npmjs.com/package/lfot)
 [![lfot](https://snyk.io/advisor/npm-package/lfot/badge.svg)](https://snyk.io/advisor/npm-package/lfot)
+[![License](https://img.shields.io/badge/ISC-blue.svg)](https://raw.githubusercontent.com/gussamer/lfot/master/LICENSE)
 # LFOT
 
 ## Light Force Operator Tools
