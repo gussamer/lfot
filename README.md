@@ -18,9 +18,9 @@ The goal of this is project is to aid in a command line based salesforce develop
 
 ## Updates
 
-- Foldered types now supported with meta fest command i.e. Report,Dashboard
+- updated tool/flist to honor maxBufferMBs for looooong field lists
 
-- alwaysHelp setting added to turn off the opening of help automatically
+- fixed meta/fest filtering namespeced being stuck always on
 
 ___
 
