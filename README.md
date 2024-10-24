@@ -151,10 +151,10 @@ ___
       lfot tool flist -s Account -i {\"name\":\"[Ii][Dd]\"} -e {\"name\":\".*__.*\|.*__.*__c\"}
       ```
 
-  - Will pass further args to sfdx force:schema:sobject:describe such as specifying username
+  - Will pass further args to ```sf force schema sobject describe``` such as specifying username
 
       ```bash
-      lfot tool flist -s Account -u user@name.alias
+      lfot tool flist -s Account -o user@name.alias
       ```
 
 ### Meta
@@ -211,7 +211,7 @@ ___
 
 ### Open
 
-#### Alias for sfdx force:org:open
+#### Alias for ```sf force org open```
 
   - Default, open your defined defualt page in your default org
 
@@ -222,7 +222,7 @@ ___
   - Open your defualt page in specified org
 
       ```bash
-      lfot open -u user@name.alias
+      lfot open -o user@name.alias
       ```
 
   - Open record page by Id
@@ -263,10 +263,10 @@ ___
       lfot open setp -j
       ```
 
-  - Will pass further args to sfdx force:org:open such as specifying username
+  - Will pass further args to ```sf force org open``` such as specifying username
 
       ```bash
-      lfot open setp -j -u user@name.alias
+      lfot open setp -j -o user@name.alias
       ```
 
 #### Open record pages
@@ -277,8 +277,8 @@ ___
       lfot open recd -i 001XXXXXXXXXXXXAAA
       ```
 
-  - Will pass further args to sfdx force:org:open such as specifying username
+  - Will pass further args to ```sf force org open``` such as specifying username
 
       ```bash
-      lfot open recd -i 001XXXXXXXXXXXXAAA -u user@name.alias
+      lfot open recd -i 001XXXXXXXXXXXXAAA -o user@name.alias
       ```
