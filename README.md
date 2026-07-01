@@ -99,7 +99,7 @@ ___
 
 ### Tool
 
-#### Generate a bashrc alias list of sfdx commands (Only works for Git Bash on Windows)
+#### Generate a bashrc alias list of sfdx commands (Only works for Git Bash on Windows)(Not Working Currently)
 
   - Default
 
