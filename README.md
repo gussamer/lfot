@@ -1,6 +1,6 @@
 [![NPM](https://img.shields.io/npm/v/lfot.svg)](https://www.npmjs.com/package/lfot)
 [![Downloads/week](https://img.shields.io/npm/dw/lfot.svg)](https://npmjs.org/package/lfot)
-[![lfot](https://snyk.io/advisor/npm-package/lfot/badge.svg)](https://snyk.io/advisor/npm-package/lfot)
+[![Known Vulnerabilities](https://snyk.io/test/github/gussamer/lfot/badge.svg?targetFile=package.json)](https://snyk.io/test/github/gussamer/lfot?targetFile=package.json)
 [![License](https://img.shields.io/badge/ISC-blue.svg)](https://raw.githubusercontent.com/gussamer/lfot/master/LICENSE)
 # LFOT
 
